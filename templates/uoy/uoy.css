@@ -1,0 +1,117 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+tr {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.rbcc {
+  border: 0;
+  cellpadding: 0;
+  cellspacing: 0;
+}
+
+.main {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.sp__inner {
+  padding: 5px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*
+ * Pre-signature — plain notice line shown above the branded footer,
+ * for things that need to be seen before the purple band (e.g. shared-inbox notices).
+ */
+.pre-signature {
+  font-size: 13px;
+  color: #3c0032;
+}
+
+/*
+ * Footer — UOY brand colours
+ */
+.footer {
+  background-color: #3c0032;
+  padding: 18px 24px 9px;
+  color: #ffffff;
+  border-top: 5px solid #6b0059;
+  mso-color-change: no-change;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+  mso-color-change: no-change;
+}
+
+.footer__main {
+  width: 100%;
+}
+
+.footer__signature {
+  font-size: 12px;
+  color: #ddc8d8;
+  padding-bottom: 6px;
+  mso-color-change: no-change;
+}
+
+.footer__name {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 22px;
+  padding-bottom: 4px;
+  mso-color-change: no-change;
+}
+
+.footer__title {
+  font-size: 13px;
+  color: #ffffff;
+  line-height: 19px;
+  mso-color-change: no-change;
+}
+
+/* Higher specificity than .footer a so the muted colour survives inlining */
+.footer .footer__disclaimer__link {
+  font-size: 11px;
+  color: #ccaacc;
+  mso-color-change: no-change;
+}
+
+.footer__social__td {
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+.footer__logo__td {
+  padding-top: 0;
+  padding-bottom: 0;
+  align: right;
+}
+
+.footer__logo__img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.footer__main a > span {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}

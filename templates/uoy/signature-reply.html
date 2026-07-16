@@ -1,0 +1,34 @@
+<!-- @include head.inc.html -->
+
+<body>
+  <br />
+
+  <table class="main rbcc">
+    <tr class="sp">
+      <td class="sp__inner"></td>
+    </tr>
+
+    <!-- @ifdef preSignature -->
+    <tr class="rbcc">
+      <td class="pre-signature" style="padding:0 24px 12px;">
+        <!-- @echo preSignature -->
+      </td>
+    </tr>
+    <!-- @endif -->
+
+    <tr class="rbcc">
+      <td class="footer" style="padding:16px 24px;">
+        <table class="rbcc footer__main">
+          <tr>
+            <td class="footer__signature" align="left">
+              <!-- @echo signature --><br />
+              <strong><!-- @echo name --></strong><br />
+              <span style="font-size:13px;color:#ddc8d8;">(pronouns: <!-- @echo pronouns -->)</span><br />
+              <span style="font-size:13px;"><!-- @echo title --> | <!-- @echo department --></span>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>

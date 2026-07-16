@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+  <!-- @echo stylesheets -->
+
+  <style type="text/css">
+    /* Hover — cannot be inlined */
+    .footer a:hover {
+      color: #ffd200 !important;
+    }
+
+    /* New Outlook dark mode: [data-ogsb] is added by Outlook when rendering in dark mode.
+       These rules restore UoY brand colours in received emails. */
+    [data-ogsb] .footer,
+    [data-ogsb] .footer td {
+      background-color: #3c0032 !important;
+      color: #ffffff !important;
+    }
+    [data-ogsb] .footer a {
+      color: #ffffff !important;
+    }
+    [data-ogsb] .footer .footer__disclaimer__link {
+      color: #ccaacc !important;
+    }
+
+    /* Mobile: stack columns, close the gap between icons and logo */
+    @media only screen and (max-width: 560px) {
+      .footer td {
+        font-size: 12px !important;
+      }
+
+      .footer__social__td {
+        display: block !important;
+        width: 100% !important;
+        padding-bottom: 16px !important;
+      }
+
+      .footer__logo__td {
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding-top: 0 !important;
+      }
+    }
+  </style>
+</head>

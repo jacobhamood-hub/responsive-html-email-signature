@@ -1,0 +1,22 @@
+<!-- @include head.inc.html -->
+
+<body>
+  <br /> <!-- Makes it easier to add text when composing -->
+
+  <table class="main rbcc">
+    <tr class="sp"><td class="sp__inner"></td></tr>
+
+    <!-- Pre-signature: plain, unbranded line shown above the purple band — e.g. shared-inbox notices that need to be seen before the footer -->
+    <!-- @ifdef preSignature -->
+    <tr class="rbcc">
+      <td class="pre-signature" style="padding:0 24px 12px;">
+        <!-- @echo preSignature -->
+      </td>
+    </tr>
+    <!-- @endif -->
+
+    <tr class="rbcc">
+      <!-- @include footer.inc.html -->
+    </tr>
+  </table>
+</body>

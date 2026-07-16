@@ -66,7 +66,8 @@ function inlineImg(options = {}) {
             // Need a format in and a result for this to work
             if (!skipFormatting) {
               if (result && (extFormat || resFormat)) {
-                $img.attr('src', `data:image/${extFormat};base64,${result}`);
+                const mimeType = extFormat === 'svg' ? 'svg+xml' : (extFormat || resFormat);
+                $img.attr('src', `data:image/${mimeType};base64,${result}`);
               } else {
                 $img.attr('src', ``);
                 $img.attr('alt', `Image not found, Please check Url`);
@@ -143,7 +144,7 @@ function getSrcBase64(base, getHTTP, src, callback) {
     if (getHTTP) {
       return getHTTPBase64(src, callback);
     } else {
-      callback(null, src, null, true);
+      setImmediate(() => callback(null, src, null, true));
     }
   }
 }
