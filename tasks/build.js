@@ -31,6 +31,16 @@ function buildTask(options) {
           stylesheets: getCssLinkTagsFromFilelist(files)
         });
 
+        // Part-time staff: "workingHours" is a simple comma-separated string (e.g. "Mon 9-2.30pm,Tues 9-2.30pm")
+        // authored in conf.json. Pre-render it into pill markup here, since gulp-preprocess's @foreach
+        // runs before @ifdef and would crash the build for every conf missing the field.
+        if (conf.workingHours) {
+          context.workingHoursPills = conf.workingHours
+            .split(',')
+            .map(hour => `<td bgcolor="#ffffff" class="footer__hours__pill" style="border-radius:12px;">${hour}</td><td width="6"></td>`)
+            .join('');
+        }
+
         return options
           .src([cwd + '/**/*.html', '!' + cwd + '/**/*.inc.html'])
           .pipe(preprocess({ context }))

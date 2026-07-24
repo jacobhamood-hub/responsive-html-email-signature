@@ -18,5 +18,27 @@
     <tr class="rbcc">
       <!-- @include footer.inc.html -->
     </tr>
+
+    <!-- Optional working hours (part-time staff): its own full-width row in the accent colour, below the
+         main footer — kept as a sibling row (not nested in .footer) so its background isn't inset by
+         .footer's own padding. workingHoursPills is pre-rendered from the conf's "workingHours" string — see tasks/build.js. -->
+    <!-- @ifdef workingHoursPills -->
+    <tr class="rbcc">
+      <td class="footer__hours" align="left">
+        <table class="rbcc">
+          <tr>
+            <td class="footer__hours__label" align="left" valign="middle">Working hours</td>
+            <td align="left">
+              <table class="rbcc" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <!-- @echo workingHoursPills -->
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- @endif -->
   </table>
 </body>
